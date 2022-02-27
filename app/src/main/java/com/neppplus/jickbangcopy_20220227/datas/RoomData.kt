@@ -9,5 +9,9 @@ class RoomData(
     val description: String,
 ) {
 
+//    층수값 => 1층, 반지하, 지하 1층 형태로 가공
+    
+    
+//    가격값 => "8,500",  "2억 3,500" 형태로 가공
 
 }
