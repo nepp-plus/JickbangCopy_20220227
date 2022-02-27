@@ -47,11 +47,14 @@ class RoomData(
         }
         else {
 
-//            26500 => "2억 6,500"
+//            26500 % 10000 => 6500 => "2억 6,500"
 
-            val formattedPrice =  NumberFormat.getNumberInstance( Locale.KOREA ).format(price)
+            val uk = price / 10000
+            val rest = price % 10000
 
-            return formattedPrice
+            val formattedRest =  NumberFormat.getNumberInstance( Locale.KOREA ).format(rest)
+
+            return "${uk}억 ${formattedRest}"
         }
 
     }
